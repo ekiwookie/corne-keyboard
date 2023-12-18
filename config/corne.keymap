@@ -57,6 +57,7 @@
 
         accent: accent {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             label = "ACCENT";
             tap-ms = <0>;
             wait-ms = <0>;
