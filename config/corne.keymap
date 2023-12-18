@@ -68,6 +68,19 @@
                 , <&macro_tap &kp N0 &kp N3 &kp N0 &kp N1 &kp SPC>
                 ;
         };
+
+        shiftalt: shiftalt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "SHIFTALT";
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp LALT>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
     };
 };
 
@@ -87,7 +100,7 @@
         lower_layer {
             bindings = <
 &kp LEFT_WIN    &kp F1  &kp F2   &kp F3     &kp F4   &accent        &kp EXCLAMATION  &kp AT    &kp HASH   &kp DOLLAR  &kp PERCENT  &kp RIGHT_WIN
-&mt LCTRL PLUS  &kp F5  &kp F6   &kp F7     &kp F8   &kp PERCENT    &kp CARET        &kp AMPS  &kp STAR   &kp LPAR    &kp RPAR     &mt RALT UNDER
+&mt LCTRL PLUS  &kp F5  &kp F6   &kp F7     &kp F8   &shiftalt      &kp CARET        &kp AMPS  &kp STAR   &kp LPAR    &kp RPAR     &mt RALT UNDER
 &mt LALT EQUAL  &kp F9  &kp F10  &kp F11    &kp F12  &kp N5         &kp N6           &kp N7    &kp N8     &kp N9      &kp N0       &mt RALT MINUS
                                  &lt 3 TAB  &trans   &trans         &trans           &trans    &lt 3 DEL
             >;
