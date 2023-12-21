@@ -113,7 +113,7 @@
 
         raise_layer {
             bindings = <
-&kp LGUI               &kp KP_MULTIPLY  &kp N7        &kp N8  &kp N9        &lt 3 PLUS      &kp INSERT  &kp HOME  &kp C_PP   &kp PG_UP  &kp C_VOL_UP  &kp RGUI
+&kp LGUI               &kp KP_MULTIPLY  &kp N7        &kp N8  &kp N9        &kp KP_PLUS     &kp INSERT  &kp HOME  &kp C_PP   &kp PG_UP  &kp C_VOL_UP  &kp RGUI
 &mt LCTRL KP_PLUS      &kp KP_DIVIDE    &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp KP_MINUS    &kp LEFT    &kp DOWN  &kp UP     &kp RIGHT  &kp C_VOL_DN  &mt RCTRL K_MENU
 &mt LEFT_ALT KP_EQUAL  &kp KP_NUMBER_0  &kp N1        &kp N2  &kp N3        &kp KP_DOT      &none       &kp END   &kp PSCRN  &kp PG_DN  &kp C_MUTE    &kp RALT
                                                       &trans  &trans        &lt 3 RET       &lt 3 ESC   &trans    &trans
