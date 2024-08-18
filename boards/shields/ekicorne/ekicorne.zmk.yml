@@ -1,5 +1,5 @@
 file_format: "1"
-id: corne
+id: ekicorne
 name: Corne
 type: shield
 url: https://github.com/foostan/crkbd/
@@ -10,5 +10,5 @@ features:
   - display
   - underglow
 siblings:
-  - corne_left
-  - corne_right
+  - ekicorne_left
+  - ekicorne_right
