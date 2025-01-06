@@ -79,37 +79,37 @@
 
         lower_layer {
             bindings = <
-//    ┌───────────┬────┬─────┬──────────┬─────┬───────────┬─────┬─────┬──────────┬─────┬─────┬───────────┐
-//    │           │ f1 │ f2  │    f3    │ f4  │  &accent  │  !  │  @  │    #     │  $  │  %  │           │
-//    ├───────────┼────┼─────┼──────────┼─────┼───────────┼─────┼─────┼──────────┼─────┼─────┼───────────┤
-//    │ mt lctl + │ f5 │ f6  │    f7    │ f8  │ &shiftalt │  ^  │  &  │    *     │  (  │  )  │ mt ralt _ │
-//    ├───────────┼────┼─────┼──────────┼─────┼───────────┼─────┼─────┼──────────┼─────┼─────┼───────────┤
-//    │ mt lalt = │ f9 │ f10 │   f11    │ f12 │           │     │     │          │     │     │ mt ralt - │
-//    └───────────┴────┴─────┼──────────┼─────┼───────────┼─────┼─────┼──────────┼─────┴─────┴───────────┘
-//                           │ lt 3 tab │     │           │     │     │ lt 3 del │
-//                           └──────────┴─────┴───────────┴─────┴─────┴──────────┘
-  &none            &kp F1   &kp F2    &kp F3      &kp F4    &accent     &kp EXCLAMATION   &kp AT     &kp HASH    &kp DOLLAR   &kp PERCENT   &none
-  &mt LCTRL PLUS   &kp F5   &kp F6    &kp F7      &kp F8    &shiftalt   &kp CARET         &kp AMPS   &kp STAR    &kp LPAR     &kp RPAR      &mt RALT UNDER
-  &mt LALT EQUAL   &kp F9   &kp F10   &kp F11     &kp F12   &none       &none             &none      &none       &none        &none         &mt RALT MINUS
-                                      &lt 3 TAB   &trans    &trans      &trans            &trans     &lt 3 DEL
+//    ┌───────────┬────────────┬────────────┬────────────┬────────────┬───────────┬─────┬───────────┬───────────┬───────────┬───────────┬───────────┐
+//    │           │     f1     │     f2     │     f3     │     f4     │  &accent  │  !  │     @     │     #     │     $     │     %     │           │
+//    ├───────────┼────────────┼────────────┼────────────┼────────────┼───────────┼─────┼───────────┼───────────┼───────────┼───────────┼───────────┤
+//    │ mt lctl + │ mt lgui f5 │ mt lalt f6 │ mt lctl f7 │ mt lsft f8 │ &shiftalt │  ^  │ mt rsft & │ mt rctl * │ mt ralt ( │ mt rgui ) │ mt rctl _ │
+//    ├───────────┼────────────┼────────────┼────────────┼────────────┼───────────┼─────┼───────────┼───────────┼───────────┼───────────┼───────────┤
+//    │ mt lalt = │     f9     │    f10     │    f11     │    f12     │           │     │           │           │           │           │ mt ralt - │
+//    └───────────┴────────────┴────────────┼────────────┼────────────┼───────────┼─────┼───────────┼───────────┼───────────┴───────────┴───────────┘
+//                                          │  lt 3 tab  │            │           │     │           │ lt 3 del  │
+//                                          └────────────┴────────────┴───────────┴─────┴───────────┴───────────┘
+  &none            &kp F1        &kp F2        &kp F3         &kp F4         &accent     &kp EXCLAMATION   &kp AT           &kp HASH         &kp DOLLAR      &kp PERCENT     &none
+  &mt LCTRL PLUS   &mt LWIN F5   &mt LALT F6   &mt LCTRL F7   &mt LSHFT F8   &shiftalt   &kp CARET         &mt RSHFT AMPS   &mt RCTRL STAR   &mt RALT LPAR   &mt RGUI RPAR   &mt RCTRL UNDER
+  &mt LALT EQUAL   &kp F9        &kp F10       &kp F11        &kp F12        &none       &none             &none            &none            &none           &none           &mt RALT MINUS
+                                               &lt 3 TAB      &trans         &trans      &trans            &trans           &lt 3 DEL
             >;
         };
 
         raise_layer {
             bindings = <
-//    ┌──────────────┬──────┬───┬─────┬─────┬──────────┬──────────┬──────┬──────┬──────┬──────┬────────────────┐
-//    │     lgui     │ kp_* │ 7 │  8  │  9  │   kp_+   │   ins    │ home │ play │ pgup │ volu │      rgui      │
-//    ├──────────────┼──────┼───┼─────┼─────┼──────────┼──────────┼──────┼──────┼──────┼──────┼────────────────┤
-//    │ mt lctl kp_+ │ kp_/ │ 4 │  5  │  6  │   kp_-   │   left   │ down │  up  │ rght │ vold │ mt rctl K_MENU │
-//    ├──────────────┼──────┼───┼─────┼─────┼──────────┼──────────┼──────┼──────┼──────┼──────┼────────────────┤
-//    │ mt lalt kp_= │  0   │ 1 │  2  │  3  │   kp_.   │          │ end  │ pscr │ pgdn │ mute │      ralt      │
-//    └──────────────┴──────┴───┼─────┼─────┼──────────┼──────────┼──────┼──────┼──────┴──────┴────────────────┘
-//                              │     │     │ lt 3 ent │ lt 3 esc │      │      │
-//                              └─────┴─────┴──────────┴──────────┴──────┴──────┘
-  &kp LGUI                &kp KP_MULTIPLY   &kp N7         &kp N8   &kp N9         &kp KP_PLUS    &kp INSERT   &kp HOME   &kp C_PP    &kp PG_UP   &kp C_VOL_UP   &kp RGUI
-  &mt LCTRL KP_PLUS       &kp KP_DIVIDE     &kp NUMBER_4   &kp N5   &kp NUMBER_6   &kp KP_MINUS   &kp LEFT     &kp DOWN   &kp UP      &kp RIGHT   &kp C_VOL_DN   &mt RCTRL K_MENU
-  &mt LEFT_ALT KP_EQUAL   &kp KP_NUMBER_0   &kp N1         &kp N2   &kp N3         &kp KP_DOT     &none        &kp END    &kp PSCRN   &kp PG_DN   &kp C_MUTE     &kp RALT
-                                                           &trans   &trans         &lt 3 RET      &lt 3 ESC    &trans     &trans
+//    ┌──────────────┬──────────────┬───────────┬───────────┬───────────┬──────────┬──────────┬──────────────┬────────────┬──────────────┬──────────────┬────────────────┐
+//    │     lgui     │     kp_*     │     7     │     8     │     9     │   kp_+   │   ins    │     home     │    play    │     pgup     │     volu     │      rgui      │
+//    ├──────────────┼──────────────┼───────────┼───────────┼───────────┼──────────┼──────────┼──────────────┼────────────┼──────────────┼──────────────┼────────────────┤
+//    │ mt lctl kp_+ │ mt lgui kp_/ │ mt lalt 4 │ mt lctl 5 │ mt lsft 6 │   kp_-   │   left   │ mt rsft down │ mt rctl up │ mt ralt rght │ mt rgui vold │ mt rctl K_MENU │
+//    ├──────────────┼──────────────┼───────────┼───────────┼───────────┼──────────┼──────────┼──────────────┼────────────┼──────────────┼──────────────┼────────────────┤
+//    │ mt lalt kp_= │      0       │     1     │     2     │     3     │   kp_.   │          │     end      │    pscr    │     pgdn     │     mute     │      ralt      │
+//    └──────────────┴──────────────┴───────────┼───────────┼───────────┼──────────┼──────────┼──────────────┼────────────┼──────────────┴──────────────┴────────────────┘
+//                                              │           │           │ lt 3 ent │ lt 3 esc │              │            │
+//                                              └───────────┴───────────┴──────────┴──────────┴──────────────┴────────────┘
+  &kp LGUI                &kp KP_MULTIPLY      &kp N7              &kp N8         &kp N9               &kp KP_PLUS    &kp INSERT   &kp HOME         &kp C_PP       &kp PG_UP        &kp C_VOL_UP        &kp RGUI
+  &mt LCTRL KP_PLUS       &mt LWIN KP_DIVIDE   &mt LALT NUMBER_4   &mt LCTRL N5   &mt LSHFT NUMBER_6   &kp KP_MINUS   &kp LEFT     &mt RSHFT DOWN   &mt RCTRL UP   &mt RALT RIGHT   &mt RGUI C_VOL_DN   &mt RCTRL K_MENU
+  &mt LEFT_ALT KP_EQUAL   &kp KP_NUMBER_0      &kp N1              &kp N2         &kp N3               &kp KP_DOT     &none        &kp END          &kp PSCRN      &kp PG_DN        &kp C_MUTE          &kp RALT
+                                                                   &trans         &trans               &lt 3 RET      &lt 3 ESC    &trans           &trans
             >;
         };
 
