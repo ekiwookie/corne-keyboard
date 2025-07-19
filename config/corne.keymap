@@ -100,7 +100,7 @@
 &trans  &trans  &trans          &kp UP_ARROW    &trans           &kp TAB      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans          &trans          &trans           &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                &kp BACKSPACE   &kp SPACE        &kp ENTER    &trans  &trans  &trans
+                                &kp BACKSPACE   &kp SPACE        &kp ENTER    &tog 0  &trans  &trans
             >;
         };
     };
