@@ -88,10 +88,10 @@
 
         adjust_layer {
             bindings = <
-&mt LWIN KP_NUMLOCK  &out OUT_USB      &out OUT_BLE       &none         &none         &none           &none  &none   &none  &none  &none  &mt RWIN CAPS
-&bt BT_CLR           &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &none   &none  &none  &none  &none
-&ext_power EP_OFF    &ext_power EP_ON  &ext_power EP_TOG  &none         &none         &none           &none  &tog 4  &none  &none  &none  &none
-                                                          &none         &none         &none           &none  &none   &none
+&mt LWIN KP_NUMLOCK  &out OUT_USB      &out OUT_BLE       &none         &none         &none           &none  &none  &none  &none  &none  &mt RWIN CAPS
+&bt BT_CLR           &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &none  &none  &none  &none  &none
+&ext_power EP_OFF    &ext_power EP_ON  &ext_power EP_TOG  &none         &none         &none           &none  &to 4  &none  &none  &none  &none
+                                                          &none         &none         &none           &none  &none  &none
             >;
         };
 
@@ -100,7 +100,7 @@
 &trans  &trans  &trans          &kp UP_ARROW    &trans           &kp TAB      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans          &trans          &trans           &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                &kp BACKSPACE   &kp SPACE        &kp ENTER    &tog 0  &trans  &trans
+                                &kp BACKSPACE   &kp SPACE        &kp ENTER    &to 0   &trans  &trans
             >;
         };
     };
