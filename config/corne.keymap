@@ -168,12 +168,12 @@
 //    ├──────┼─────┼───┼──────────┼─────┼──────────┼─────┼─────┼─────┼─────┼─────┼─────┤
 //    │ lsft │  Z  │ X │    C     │  V  │    M     │     │     │     │     │     │     │
 //    └──────┴─────┴───┼──────────┼─────┼──────────┼─────┼─────┼─────┼─────┴─────┴─────┘
-//                     │ lt 2 esc │ spc │ lt 2 ent │ esc │     │     │
+//                     │ lt 1 esc │ spc │ lt 1 ent │ esc │     │     │
 //                     └──────────┴─────┴──────────┴─────┴─────┴─────┘
   &kp LALT    &kp G   &kp Q   &kp W       &kp E       &kp R       &none     &none   &none   &none   &none   &none
   &kp LCTRL   &none   &kp A   &kp S       &kp D       &kp F       &none     &none   &none   &none   &none   &none
   &kp LSHFT   &kp Z   &kp X   &kp C       &kp V       &kp M       &none     &none   &none   &none   &none   &none
-                              &lt 2 ESC   &kp SPACE   &lt 2 RET   &kp ESC   &none   &none
+                              &lt 1 ESC   &kp SPACE   &lt 1 RET   &kp ESC   &none   &none
             >;
         };
     };
