@@ -25,7 +25,7 @@
         exit_to_default_layer {
             bindings = <&to DEF>;
             key-positions = <0 11>;
-            layers = <4>;
+            layers = <4 5>;
         };
     };
 
@@ -124,18 +124,18 @@
 
         adjust_layer {
             bindings = <
-//    ┌──────────────┬──────────┬───────────┬──────────┬──────────┬──────────┬─────┬──────┬─────┬─────┬─────┬──────────────┐
-//    │ mt lgui nlck │ out_ usb │ out_ ble  │          │          │          │     │      │     │     │     │ mt rgui caps │
-//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼──────┼─────┼─────┼─────┼──────────────┤
-//    │    bt_clr    │ bt_sel 0 │ bt_sel 1  │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │     │      │     │     │     │              │
-//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼──────┼─────┼─────┼─────┼──────────────┤
-//    │   epwr_ on   │ epwr_ on │ epwr_ tog │          │          │          │     │ to 4 │     │     │     │              │
-//    └──────────────┴──────────┴───────────┼──────────┼──────────┼──────────┼─────┼──────┼─────┼─────┴─────┴──────────────┘
-//                                          │          │          │          │     │      │     │
-//                                          └──────────┴──────────┴──────────┴─────┴──────┴─────┘
+//    ┌──────────────┬──────────┬───────────┬──────────┬──────────┬──────────┬─────┬──────┬──────┬─────┬─────┬──────────────┐
+//    │ mt lgui nlck │ out_ usb │ out_ ble  │          │          │          │     │      │      │     │     │ mt rgui caps │
+//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼──────┼──────┼─────┼─────┼──────────────┤
+//    │    bt_clr    │ bt_sel 0 │ bt_sel 1  │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │     │      │      │     │     │              │
+//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼──────┼──────┼─────┼─────┼──────────────┤
+//    │   epwr_ on   │ epwr_ on │ epwr_ tog │          │          │          │     │ to 4 │ to 5 │     │     │              │
+//    └──────────────┴──────────┴───────────┼──────────┼──────────┼──────────┼─────┼──────┼──────┼─────┴─────┴──────────────┘
+//                                          │          │          │          │     │      │      │
+//                                          └──────────┴──────────┴──────────┴─────┴──────┴──────┘
   &mt LWIN KP_NUMLOCK   &out OUT_USB       &out OUT_BLE        &none          &none          &none          &none   &none   &none   &none   &none   &mt RWIN CAPS
   &bt BT_CLR            &bt BT_SEL 0       &bt BT_SEL 1        &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none   &none   &none   &none   &none
-  &ext_power EP_OFF     &ext_power EP_ON   &ext_power EP_TOG   &none          &none          &none          &none   &to 4   &none   &none   &none   &none
+  &ext_power EP_OFF     &ext_power EP_ON   &ext_power EP_TOG   &none          &none          &none          &none   &to 4   &to 5   &none   &none   &none
                                                                &none          &none          &none          &none   &none   &none
             >;
         };
@@ -155,6 +155,25 @@
   &trans   &trans   &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW   &trans      &trans    &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans           &trans           &trans            &trans      &trans    &trans   &trans   &trans   &trans   &trans
                                      &kp BACKSPACE    &kp SPACE         &kp ENTER   &kp ESC   &trans   &trans
+            >;
+
+
+        };
+        factorio_layer {
+            bindings = <
+//    ┌───────┬─────┬─────┬─────┬─────┬──────────┬─────┬─────┬─────┬─────┬─────┬─────┐
+//    │ &lalt │  G  │  Q  │  W  │  E  │    R     │     │     │     │     │     │     │
+//    ├───────┼─────┼─────┼─────┼─────┼──────────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │ lctl  │     │  A  │  S  │  D  │    F     │     │     │     │     │     │     │
+//    ├───────┼─────┼─────┼─────┼─────┼──────────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │ lsft  │  Z  │     │  C  │     │    M     │     │     │     │     │     │     │
+//    └───────┴─────┴─────┼─────┼─────┼──────────┼─────┼─────┼─────┼─────┴─────┴─────┘
+//                        │ esc │ spc │ lt 2 ent │ esc │     │     │
+//                        └─────┴─────┴──────────┴─────┴─────┴─────┘
+  &LALT       &kp G   &kp Q   &kp W     &kp E     &kp R         &none     &none   &none   &none   &none   &none
+  &kp LCTRL   &none   &kp A   &kp S     &kp D     &kp F         &none     &none   &none   &none   &none   &none
+  &kp LSHFT   &kp Z   &none   &kp C     &none     &kp M         &none     &none   &none   &none   &none   &none
+                              &kp ESC   &kp SPC   &lt 2 ENTER   &kp ESC   &none   &none
             >;
         };
     };
