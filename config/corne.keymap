@@ -163,19 +163,19 @@
         };
         factorio_layer {
             bindings = <
-//    ┌──────┬─────┬───┬──────────┬─────┬──────────┬─────┬─────┬─────┬─────┬─────┬─────┐
-//    │ lalt │  G  │ Q │    W     │  E  │    R     │     │     │     │     │     │     │
-//    ├──────┼─────┼───┼──────────┼─────┼──────────┼─────┼─────┼─────┼─────┼─────┼─────┤
-//    │ lctl │     │ A │    S     │  D  │    F     │     │     │     │     │     │     │
-//    ├──────┼─────┼───┼──────────┼─────┼──────────┼─────┼─────┼─────┼─────┼─────┼─────┤
-//    │ lsft │  Z  │ X │    C     │  V  │    M     │     │     │     │     │     │     │
-//    └──────┴─────┴───┼──────────┼─────┼──────────┼─────┼─────┼─────┼─────┴─────┴─────┘
-//                     │ lt 1 esc │ spc │ mo 1 ent │ esc │     │     │
-//                     └──────────┴─────┴──────────┴─────┴─────┴─────┘
-  &kp LALT    &kp G   &kp Q   &kp W       &kp E       &kp R       &none     &none   &none   &none   &none   &none
-  &kp LCTRL   &none   &kp A   &kp S       &kp D       &kp F       &none     &none   &none   &none   &none   &none
-  &kp LSHFT   &kp Z   &kp X   &kp C       &kp V       &kp M       &none     &none   &none   &none   &none   &none
-                              &lt 1 ESC   &kp SPACE   &mo 1 RET   &kp ESC   &none   &none
+//    ┌──────┬─────┬───┬────────────┬─────┬────────────┬─────┬─────┬─────┬─────┬─────┬─────┐
+//    │ lalt │  G  │ Q │     W      │  E  │     R      │     │     │     │     │     │     │
+//    ├──────┼─────┼───┼────────────┼─────┼────────────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │ lctl │     │ A │     S      │  D  │     F      │     │     │     │     │     │     │
+//    ├──────┼─────┼───┼────────────┼─────┼────────────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │ lsft │  Z  │ X │     C      │  V  │     M      │     │     │     │     │     │     │
+//    └──────┴─────┴───┼────────────┼─────┼────────────┼─────┼─────┼─────┼─────┴─────┴─────┘
+//                     │ lt LWR esc │ spc │ lt LWR ent │ esc │     │     │
+//                     └────────────┴─────┴────────────┴─────┴─────┴─────┘
+  &kp LALT    &kp G   &kp Q   &kp W         &kp E       &kp R         &none     &none   &none   &none   &none   &none
+  &kp LCTRL   &none   &kp A   &kp S         &kp D       &kp F         &none     &none   &none   &none   &none   &none
+  &kp LSHFT   &kp Z   &kp X   &kp C         &kp V       &kp M         &none     &none   &none   &none   &none   &none
+                              &lt LWR ESC   &kp SPACE   &lt LWR RET   &kp ESC   &none   &none
             >;
         };
     };
