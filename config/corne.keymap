@@ -14,6 +14,8 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+#define WRMS 4
+#define FCTRIO 5
 
 &lt { quick_tap_ms = <220>; };
 
@@ -124,19 +126,19 @@
 
         adjust_layer {
             bindings = <
-//    ┌──────────────┬──────────┬───────────┬──────────┬──────────┬──────────┬─────┬──────┬───────┬─────┬─────┬──────────────┐
-//    │ mt lgui nlck │ out_ usb │ out_ ble  │          │          │          │     │      │       │     │     │ mt rgui caps │
-//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼──────┼───────┼─────┼─────┼──────────────┤
-//    │    bt_clr    │ bt_sel 0 │ bt_sel 1  │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │     │      │       │     │     │              │
-//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼──────┼───────┼─────┼─────┼──────────────┤
-//    │   epwr_ on   │ epwr_ on │ epwr_ tog │          │          │          │     │ to 4 │ tog 5 │     │     │              │
-//    └──────────────┴──────────┴───────────┼──────────┼──────────┼──────────┼─────┼──────┼───────┼─────┴─────┴──────────────┘
-//                                          │          │          │          │     │      │       │
-//                                          └──────────┴──────────┴──────────┴─────┴──────┴───────┘
-  &mt LWIN KP_NUMLOCK   &out OUT_USB       &out OUT_BLE        &none          &none          &none          &none   &none   &none    &none   &none   &mt RWIN CAPS
-  &bt BT_CLR            &bt BT_SEL 0       &bt BT_SEL 1        &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none   &none    &none   &none   &none
-  &ext_power EP_OFF     &ext_power EP_ON   &ext_power EP_TOG   &none          &none          &none          &none   &to 4   &tog 5   &none   &none   &none
-                                                               &none          &none          &none          &none   &none   &none
+//    ┌──────────────┬──────────┬───────────┬──────────┬──────────┬──────────┬─────┬─────────┬────────────┬─────┬─────┬──────────────┐
+//    │ mt lgui nlck │ out_ usb │ out_ ble  │          │          │          │     │         │            │     │     │ mt rgui caps │
+//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼─────────┼────────────┼─────┼─────┼──────────────┤
+//    │    bt_clr    │ bt_sel 0 │ bt_sel 1  │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │     │         │            │     │     │              │
+//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼─────────┼────────────┼─────┼─────┼──────────────┤
+//    │   epwr_ on   │ epwr_ on │ epwr_ tog │          │          │          │     │ to WRMS │ tog FCTRIO │     │     │              │
+//    └──────────────┴──────────┴───────────┼──────────┼──────────┼──────────┼─────┼─────────┼────────────┼─────┴─────┴──────────────┘
+//                                          │          │          │          │     │         │            │
+//                                          └──────────┴──────────┴──────────┴─────┴─────────┴────────────┘
+  &mt LWIN KP_NUMLOCK   &out OUT_USB       &out OUT_BLE        &none          &none          &none          &none   &none      &none         &none   &none   &mt RWIN CAPS
+  &bt BT_CLR            &bt BT_SEL 0       &bt BT_SEL 1        &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none      &none         &none   &none   &none
+  &ext_power EP_OFF     &ext_power EP_ON   &ext_power EP_TOG   &none          &none          &none          &none   &to WRMS   &tog FCTRIO   &none   &none   &none
+                                                               &none          &none          &none          &none   &none      &none
             >;
         };
 
@@ -168,12 +170,12 @@
 //    ├──────┼─────┼───┼──────────┼─────┼──────────┼─────┼─────┼─────┼─────┼─────┼─────┤
 //    │ lsft │  Z  │ X │    C     │  V  │    M     │     │     │     │     │     │     │
 //    └──────┴─────┴───┼──────────┼─────┼──────────┼─────┼─────┼─────┼─────┴─────┴─────┘
-//                     │ lt 1 esc │ spc │ lt 1 ent │ esc │     │     │
+//                     │ lt 1 esc │ spc │ mo 1 ent │ esc │     │     │
 //                     └──────────┴─────┴──────────┴─────┴─────┴─────┘
   &kp LALT    &kp G   &kp Q   &kp W       &kp E       &kp R       &none     &none   &none   &none   &none   &none
   &kp LCTRL   &none   &kp A   &kp S       &kp D       &kp F       &none     &none   &none   &none   &none   &none
   &kp LSHFT   &kp Z   &kp X   &kp C       &kp V       &kp M       &none     &none   &none   &none   &none   &none
-                              &lt 1 ESC   &kp SPACE   &lt 1 RET   &kp ESC   &none   &none
+                              &lt 1 ESC   &kp SPACE   &mo 1 RET   &kp ESC   &none   &none
             >;
         };
     };
