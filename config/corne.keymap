@@ -72,73 +72,73 @@
 
         default_layer {
             bindings = <
-//    ┌───────────┬───────────┬───────────┬───────────┬─────────────┬──────────┬──────────┬──────────────┬───────────┬───────────┬───────────┬───────────┐
-//    │ mt lgui ] │     Q     │     W     │     E     │      R      │    T     │    Y     │      U       │     I     │     O     │     P     │ mt rgui [ │
-//    ├───────────┼───────────┼───────────┼───────────┼─────────────┼──────────┼──────────┼──────────────┼───────────┼───────────┼───────────┼───────────┤
-//    │ mt lctl ` │ mt lgui A │ mt lalt S │ mt lctl D │  mt lsft F  │    G     │    H     │  mt rsft J   │ mt rctl K │ mt ralt L │ mt rgui ; │ mt rctl ' │
-//    ├───────────┼───────────┼───────────┼───────────┼─────────────┼──────────┼──────────┼──────────────┼───────────┼───────────┼───────────┼───────────┤
-//    │ mt lalt \ │     Z     │     X     │     C     │      V      │    B     │    N     │      M       │     ,     │     .     │     /     │ mt ralt - │
-//    └───────────┴───────────┴───────────┼───────────┼─────────────┼──────────┼──────────┼──────────────┼───────────┼───────────┴───────────┴───────────┘
-//                                        │ lt 2 tab  │ mt lsft spc │ lt 1 ent │ lt 1 esc │ mt rsft bspc │ lt 2 del  │
-//                                        └───────────┴─────────────┴──────────┴──────────┴──────────────┴───────────┘
-  &mt LWIN RBKT     &kp Q        &kp W        &kp E         &kp R             &kp T       &kp Y       &kp U            &kp I         &kp O        &kp P           &mt RWIN LBKT
-  &mt LCTRL GRAVE   &mt LWIN A   &mt LALT S   &mt LCTRL D   &mt LSHFT F       &kp G       &kp H       &mt RSHFT J      &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &mt RCTRL SQT
-  &mt LALT BSLH     &kp Z        &kp X        &kp C         &kp V             &kp B       &kp N       &kp M            &kp COMMA     &kp DOT      &kp FSLH        &mt RALT MINUS
-                                              &lt 2 TAB     &mt LSHFT SPACE   &lt 1 RET   &lt 1 ESC   &mt RSHFT BSPC   &lt 2 DEL
+//    ┌───────────┬───────────┬───────────┬──────────────┬─────────────┬────────────┬────────────┬──────────────┬──────────────┬───────────┬───────────┬───────────┐
+//    │ mt lgui ] │     Q     │     W     │      E       │      R      │     T      │     Y      │      U       │      I       │     O     │     P     │ mt rgui [ │
+//    ├───────────┼───────────┼───────────┼──────────────┼─────────────┼────────────┼────────────┼──────────────┼──────────────┼───────────┼───────────┼───────────┤
+//    │ mt lctl ` │ mt lgui A │ mt lalt S │  mt lctl D   │  mt lsft F  │     G      │     H      │  mt rsft J   │  mt rctl K   │ mt ralt L │ mt rgui ; │ mt rctl ' │
+//    ├───────────┼───────────┼───────────┼──────────────┼─────────────┼────────────┼────────────┼──────────────┼──────────────┼───────────┼───────────┼───────────┤
+//    │ mt lalt \ │     Z     │     X     │      C       │      V      │     B      │     N      │      M       │      ,       │     .     │     /     │ mt ralt - │
+//    └───────────┴───────────┴───────────┼──────────────┼─────────────┼────────────┼────────────┼──────────────┼──────────────┼───────────┴───────────┴───────────┘
+//                                        │ lt rsftE tab │ mt lsft spc │ lt LWR ent │ lt LWR esc │ mt rsft bspc │ lt rsftE del │
+//                                        └──────────────┴─────────────┴────────────┴────────────┴──────────────┴──────────────┘
+  &mt LWIN RBKT     &kp Q        &kp W        &kp E         &kp R             &kp T         &kp Y         &kp U            &kp I         &kp O        &kp P           &mt RWIN LBKT
+  &mt LCTRL GRAVE   &mt LWIN A   &mt LALT S   &mt LCTRL D   &mt LSHFT F       &kp G         &kp H         &mt RSHFT J      &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &mt RCTRL SQT
+  &mt LALT BSLH     &kp Z        &kp X        &kp C         &kp V             &kp B         &kp N         &kp M            &kp COMMA     &kp DOT      &kp FSLH        &mt RALT MINUS
+                                              &lt RSE TAB   &mt LSHFT SPACE   &lt LWR RET   &lt LWR ESC   &mt RSHFT BSPC   &lt RSE DEL
             >;
         };
 
         lower_layer {
             bindings = <
-//    ┌───────────┬────────────┬────────────┬────────────┬────────────┬───────────┬─────┬───────────┬───────────┬───────────┬───────────┬───────────┐
-//    │           │     f1     │     f2     │     f3     │     f4     │  &accent  │  !  │     @     │     #     │     $     │     %     │           │
-//    ├───────────┼────────────┼────────────┼────────────┼────────────┼───────────┼─────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-//    │ mt lctl + │ mt lgui f5 │ mt lalt f6 │ mt lctl f7 │ mt lsft f8 │ &shiftalt │  ^  │ mt rsft & │ mt rctl * │ mt ralt ( │ mt rgui ) │ mt rctl _ │
-//    ├───────────┼────────────┼────────────┼────────────┼────────────┼───────────┼─────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-//    │ mt lalt = │     f9     │    f10     │    f11     │    f12     │           │     │           │           │           │           │ mt ralt - │
-//    └───────────┴────────────┴────────────┼────────────┼────────────┼───────────┼─────┼───────────┼───────────┼───────────┴───────────┴───────────┘
-//                                          │  lt 3 tab  │            │           │     │           │ lt 3 del  │
-//                                          └────────────┴────────────┴───────────┴─────┴───────────┴───────────┘
+//    ┌───────────┬────────────┬────────────┬────────────┬────────────┬───────────┬─────┬───────────┬────────────┬───────────┬───────────┬───────────┐
+//    │           │     f1     │     f2     │     f3     │     f4     │  &accent  │  !  │     @     │     #      │     $     │     %     │           │
+//    ├───────────┼────────────┼────────────┼────────────┼────────────┼───────────┼─────┼───────────┼────────────┼───────────┼───────────┼───────────┤
+//    │ mt lctl + │ mt lgui f5 │ mt lalt f6 │ mt lctl f7 │ mt lsft f8 │ &shiftalt │  ^  │ mt rsft & │ mt rctl *  │ mt ralt ( │ mt rgui ) │ mt rctl _ │
+//    ├───────────┼────────────┼────────────┼────────────┼────────────┼───────────┼─────┼───────────┼────────────┼───────────┼───────────┼───────────┤
+//    │ mt lalt = │     f9     │    f10     │    f11     │    f12     │           │     │           │            │           │           │ mt ralt - │
+//    └───────────┴────────────┴────────────┼────────────┼────────────┼───────────┼─────┼───────────┼────────────┼───────────┴───────────┴───────────┘
+//                                          │ lt ADJ tab │            │           │     │           │ lt ADJ del │
+//                                          └────────────┴────────────┴───────────┴─────┴───────────┴────────────┘
   &none            &kp F1        &kp F2        &kp F3         &kp F4         &accent     &kp EXCLAMATION   &kp AT           &kp HASH         &kp DOLLAR      &kp PERCENT     &none
   &mt LCTRL PLUS   &mt LWIN F5   &mt LALT F6   &mt LCTRL F7   &mt LSHFT F8   &shiftalt   &kp CARET         &mt RSHFT AMPS   &mt RCTRL STAR   &mt RALT LPAR   &mt RGUI RPAR   &mt RCTRL UNDER
   &mt LALT EQUAL   &kp F9        &kp F10       &kp F11        &kp F12        &none       &none             &none            &none            &none           &none           &mt RALT MINUS
-                                               &lt 3 TAB      &trans         &trans      &trans            &trans           &lt 3 DEL
+                                               &lt ADJ TAB    &trans         &trans      &trans            &trans           &lt ADJ DEL
             >;
         };
 
         raise_layer {
             bindings = <
-//    ┌──────────────┬──────────────┬───────────┬───────────┬───────────┬──────────┬──────────┬──────────────┬────────────┬──────────────┬──────────────┬────────────────┐
-//    │     lgui     │     kp_*     │     7     │     8     │     9     │   kp_+   │   ins    │     home     │    play    │     pgup     │     volu     │      rgui      │
-//    ├──────────────┼──────────────┼───────────┼───────────┼───────────┼──────────┼──────────┼──────────────┼────────────┼──────────────┼──────────────┼────────────────┤
-//    │ mt lctl kp_+ │ mt lgui kp_/ │ mt lalt 4 │ mt lctl 5 │ mt lsft 6 │   kp_-   │   left   │ mt rsft down │ mt rctl up │ mt ralt rght │ mt rgui vold │ mt rctl K_MENU │
-//    ├──────────────┼──────────────┼───────────┼───────────┼───────────┼──────────┼──────────┼──────────────┼────────────┼──────────────┼──────────────┼────────────────┤
-//    │ mt lalt kp_= │      0       │     1     │     2     │     3     │   kp_.   │          │     end      │    pscr    │     pgdn     │     mute     │      ralt      │
-//    └──────────────┴──────────────┴───────────┼───────────┼───────────┼──────────┼──────────┼──────────────┼────────────┼──────────────┴──────────────┴────────────────┘
-//                                              │           │           │ lt 3 ent │ lt 3 esc │              │            │
-//                                              └───────────┴───────────┴──────────┴──────────┴──────────────┴────────────┘
-  &kp LGUI                &kp KP_MULTIPLY      &kp N7              &kp N8         &kp N9               &kp KP_PLUS    &kp INSERT   &kp HOME         &kp C_PP       &kp PG_UP        &kp C_VOL_UP        &kp RGUI
-  &mt LCTRL KP_PLUS       &mt LWIN KP_DIVIDE   &mt LALT NUMBER_4   &mt LCTRL N5   &mt LSHFT NUMBER_6   &kp KP_MINUS   &kp LEFT     &mt RSHFT DOWN   &mt RCTRL UP   &mt RALT RIGHT   &mt RGUI C_VOL_DN   &mt RCTRL K_MENU
-  &mt LEFT_ALT KP_EQUAL   &kp KP_NUMBER_0      &kp N1              &kp N2         &kp N3               &kp KP_DOT     &none        &kp END          &kp PSCRN      &kp PG_DN        &kp C_MUTE          &kp RALT
-                                                                   &trans         &trans               &lt 3 RET      &lt 3 ESC    &trans           &trans
+//    ┌──────────────┬──────────────┬───────────┬───────────┬───────────┬────────────┬────────────┬──────────────┬────────────┬──────────────┬──────────────┬────────────────┐
+//    │     lgui     │     kp_*     │     7     │     8     │     9     │    kp_+    │    ins     │     home     │    play    │     pgup     │     volu     │      rgui      │
+//    ├──────────────┼──────────────┼───────────┼───────────┼───────────┼────────────┼────────────┼──────────────┼────────────┼──────────────┼──────────────┼────────────────┤
+//    │ mt lctl kp_+ │ mt lgui kp_/ │ mt lalt 4 │ mt lctl 5 │ mt lsft 6 │    kp_-    │    left    │ mt rsft down │ mt rctl up │ mt ralt rght │ mt rgui vold │ mt rctl K_MENU │
+//    ├──────────────┼──────────────┼───────────┼───────────┼───────────┼────────────┼────────────┼──────────────┼────────────┼──────────────┼──────────────┼────────────────┤
+//    │ mt lalt kp_= │      0       │     1     │     2     │     3     │    kp_.    │            │     end      │    pscr    │     pgdn     │     mute     │      ralt      │
+//    └──────────────┴──────────────┴───────────┼───────────┼───────────┼────────────┼────────────┼──────────────┼────────────┼──────────────┴──────────────┴────────────────┘
+//                                              │           │           │ lt ADJ ent │ lt ADJ esc │              │            │
+//                                              └───────────┴───────────┴────────────┴────────────┴──────────────┴────────────┘
+  &kp LGUI                &kp KP_MULTIPLY      &kp N7              &kp N8         &kp N9               &kp KP_PLUS    &kp INSERT    &kp HOME         &kp C_PP       &kp PG_UP        &kp C_VOL_UP        &kp RGUI
+  &mt LCTRL KP_PLUS       &mt LWIN KP_DIVIDE   &mt LALT NUMBER_4   &mt LCTRL N5   &mt LSHFT NUMBER_6   &kp KP_MINUS   &kp LEFT      &mt RSHFT DOWN   &mt RCTRL UP   &mt RALT RIGHT   &mt RGUI C_VOL_DN   &mt RCTRL K_MENU
+  &mt LEFT_ALT KP_EQUAL   &kp KP_NUMBER_0      &kp N1              &kp N2         &kp N3               &kp KP_DOT     &none         &kp END          &kp PSCRN      &kp PG_DN        &kp C_MUTE          &kp RALT
+                                                                   &trans         &trans               &lt ADJ RET    &lt ADJ ESC   &trans           &trans
             >;
         };
 
         adjust_layer {
             bindings = <
-//    ┌──────────────┬──────────┬───────────┬──────────┬──────────┬──────────┬─────┬─────────┬────────────┬─────┬─────┬──────────────┐
-//    │ mt lgui nlck │ out_ usb │ out_ ble  │          │          │          │     │         │            │     │     │ mt rgui caps │
-//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼─────────┼────────────┼─────┼─────┼──────────────┤
-//    │    bt_clr    │ bt_sel 0 │ bt_sel 1  │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │     │         │            │     │     │              │
-//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼─────────┼────────────┼─────┼─────┼──────────────┤
-//    │   epwr_ on   │ epwr_ on │ epwr_ tog │          │          │          │     │ to WRMS │ tog FCTRIO │     │     │              │
-//    └──────────────┴──────────┴───────────┼──────────┼──────────┼──────────┼─────┼─────────┼────────────┼─────┴─────┴──────────────┘
-//                                          │          │          │          │     │         │            │
-//                                          └──────────┴──────────┴──────────┴─────┴─────────┴────────────┘
-  &mt LWIN KP_NUMLOCK   &out OUT_USB       &out OUT_BLE        &none          &none          &none          &none   &none      &none         &none   &none   &mt RWIN CAPS
-  &bt BT_CLR            &bt BT_SEL 0       &bt BT_SEL 1        &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none      &none         &none   &none   &none
-  &ext_power EP_OFF     &ext_power EP_ON   &ext_power EP_TOG   &none          &none          &none          &none   &to WRMS   &tog FCTRIO   &none   &none   &none
-                                                               &none          &none          &none          &none   &none      &none
+//    ┌──────────────┬──────────┬───────────┬──────────┬──────────┬──────────┬─────┬──────────┬────────────┬─────┬─────┬──────────────┐
+//    │ mt lgui nlck │ out_ usb │ out_ ble  │          │          │          │     │          │            │     │     │ mt rgui caps │
+//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼──────────┼────────────┼─────┼─────┼──────────────┤
+//    │    bt_clr    │ bt_sel 0 │ bt_sel 1  │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │     │          │            │     │     │              │
+//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼──────────┼────────────┼─────┼─────┼──────────────┤
+//    │   epwr_ on   │ epwr_ on │ epwr_ tog │          │          │          │     │ tog WRMS │ tog FCTRIO │     │     │              │
+//    └──────────────┴──────────┴───────────┼──────────┼──────────┼──────────┼─────┼──────────┼────────────┼─────┴─────┴──────────────┘
+//                                          │          │          │          │     │          │            │
+//                                          └──────────┴──────────┴──────────┴─────┴──────────┴────────────┘
+  &mt LWIN KP_NUMLOCK   &out OUT_USB       &out OUT_BLE        &none          &none          &none          &none   &none       &none         &none   &none   &mt RWIN CAPS
+  &bt BT_CLR            &bt BT_SEL 0       &bt BT_SEL 1        &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none       &none         &none   &none   &none
+  &ext_power EP_OFF     &ext_power EP_ON   &ext_power EP_TOG   &none          &none          &none          &none   &tog WRMS   &tog FCTRIO   &none   &none   &none
+                                                               &none          &none          &none          &none   &none       &none
             >;
         };
 
