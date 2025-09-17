@@ -11,11 +11,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT_LAYER 0
-#define ADJUST_LAYER 1
-#define WORMS_LAYER 2
-#define FACTORIO_LAYER 3
-#define FN_LAYER 4
-#define NUMERIC_LAYER 5
+#define WORMS_LAYER 1
+#define FACTORIO_LAYER 2
+#define FN_LAYER 3
+#define NUMERIC_LAYER 4
+#define ADJUST_LAYER 5
 
 &lt { quick_tap_ms = <220>; };
 
@@ -89,23 +89,6 @@
         };
 
 
-        adjust_layer {
-            bindings = <
-//    ┌──────────────┬──────────┬───────────┬──────────┬──────────┬──────────┬─────┬───────────────────┬──────────────────────┬─────┬─────┬──────────────┐
-//    │ mt lgui nlck │ out_ usb │ out_ ble  │          │          │          │     │                   │                      │     │     │ mt rgui caps │
-//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼───────────────────┼──────────────────────┼─────┼─────┼──────────────┤
-//    │    bt_clr    │ bt_sel 0 │ bt_sel 1  │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │     │                   │                      │     │     │              │
-//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼───────────────────┼──────────────────────┼─────┼─────┼──────────────┤
-//    │   epwr_ on   │ epwr_ on │ epwr_ tog │          │          │          │     │ tog WORMS_laltYER │ tog FACTORIO_laltYER │     │     │              │
-//    └──────────────┴──────────┴───────────┼──────────┼──────────┼──────────┼─────┼───────────────────┼──────────────────────┼─────┴─────┴──────────────┘
-//                                          │          │          │          │     │                   │                      │
-//                                          └──────────┴──────────┴──────────┴─────┴───────────────────┴──────────────────────┘
-  &mt LWIN KP_NUMLOCK   &out OUT_USB       &out OUT_BLE        &none          &none          &none          &none   &none              &none                 &none   &none   &mt RWIN CAPS
-  &bt BT_CLR            &bt BT_SEL 0       &bt BT_SEL 1        &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none              &none                 &none   &none   &none
-  &ext_power EP_OFF     &ext_power EP_ON   &ext_power EP_TOG   &none          &none          &none          &none   &tog WORMS_LAYER   &tog FACTORIO_LAYER   &none   &none   &none
-                                                               &none          &none          &none          &none   &none              &none
-            >;
-        };
 
         worms1_layer {
             bindings = <
@@ -177,6 +160,24 @@
   &mt LCTRL KP_PLUS       &mt LWIN KP_DIVIDE   &mt LALT NUMBER_4   &mt LCTRL N5   &mt LSHFT NUMBER_6   &kp KP_MINUS           &kp LEFT               &mt RSHFT DOWN   &mt RCTRL UP   &mt RALT RIGHT   &mt RGUI C_VOL_DN   &mt RCTRL K_MENU
   &mt LEFT_ALT KP_EQUAL   &kp KP_NUMBER_0      &kp N1              &kp N2         &kp N3               &kp KP_DOT             &none                  &kp END          &kp PSCRN      &kp PG_DN        &kp C_MUTE          &kp RALT
                                                                    &trans         &trans               &lt ADJUST_LAYER RET   &lt ADJUST_LAYER ESC   &trans           &trans
+            >;
+        };
+
+        adjust_layer {
+            bindings = <
+//    ┌──────────────┬──────────┬───────────┬──────────┬──────────┬──────────┬─────┬───────────────────┬──────────────────────┬─────┬─────┬──────────────┐
+//    │ mt lgui nlck │ out_ usb │ out_ ble  │          │          │          │     │                   │                      │     │     │ mt rgui caps │
+//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼───────────────────┼──────────────────────┼─────┼─────┼──────────────┤
+//    │    bt_clr    │ bt_sel 0 │ bt_sel 1  │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │     │                   │                      │     │     │              │
+//    ├──────────────┼──────────┼───────────┼──────────┼──────────┼──────────┼─────┼───────────────────┼──────────────────────┼─────┼─────┼──────────────┤
+//    │   epwr_ on   │ epwr_ on │ epwr_ tog │          │          │          │     │ tog WORMS_laltYER │ tog FACTORIO_laltYER │     │     │              │
+//    └──────────────┴──────────┴───────────┼──────────┼──────────┼──────────┼─────┼───────────────────┼──────────────────────┼─────┴─────┴──────────────┘
+//                                          │          │          │          │     │                   │                      │
+//                                          └──────────┴──────────┴──────────┴─────┴───────────────────┴──────────────────────┘
+  &mt LWIN KP_NUMLOCK   &out OUT_USB       &out OUT_BLE        &none          &none          &none          &none   &none              &none                 &none   &none   &mt RWIN CAPS
+  &bt BT_CLR            &bt BT_SEL 0       &bt BT_SEL 1        &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none              &none                 &none   &none   &none
+  &ext_power EP_OFF     &ext_power EP_ON   &ext_power EP_TOG   &none          &none          &none          &none   &tog WORMS_LAYER   &tog FACTORIO_LAYER   &none   &none   &none
+                                                               &none          &none          &none          &none   &none              &none
             >;
         };
 
