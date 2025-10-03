@@ -129,19 +129,19 @@
 
         fn_layer {
             bindings = <
-//    ┌───────────┬────────────┬────────────┬───────────────────────┬────────────┬───────────┬─────┬───────────┬───────────────────────┬───────────┬───────────┬───────────┐
-//    │           │     f1     │     f2     │          f3           │     f4     │  &accent  │  !  │     @     │           #           │     $     │     %     │           │
-//    ├───────────┼────────────┼────────────┼───────────────────────┼────────────┼───────────┼─────┼───────────┼───────────────────────┼───────────┼───────────┼───────────┤
-//    │ mt lctl + │ mt lgui f5 │ mt lalt f6 │      mt lctl f7       │ mt lsft f8 │ &shiftalt │  ^  │ mt rsft & │       mt rctl *       │ mt ralt ( │ mt rgui ) │ mt rctl _ │
-//    ├───────────┼────────────┼────────────┼───────────────────────┼────────────┼───────────┼─────┼───────────┼───────────────────────┼───────────┼───────────┼───────────┤
-//    │ mt lalt = │     f9     │    f10     │          f11          │    f12     │           │     │           │                       │           │           │ mt ralt - │
-//    └───────────┴────────────┴────────────┼───────────────────────┼────────────┼───────────┼─────┼───────────┼───────────────────────┼───────────┴───────────┴───────────┘
-//                                          │ lt ADJUST_laltYER tab │            │           │     │           │ lt ADJUST_laltYER del │
-//                                          └───────────────────────┴────────────┴───────────┴─────┴───────────┴───────────────────────┘
-  &none            &kp F1        &kp F2        &kp F3                 &kp F4         &accent     &kp EXCLAMATION   &kp AT           &kp HASH               &kp DOLLAR      &kp PERCENT     &none
-  &mt LCTRL PLUS   &mt LWIN F5   &mt LALT F6   &mt LCTRL F7           &mt LSHFT F8   &shiftalt   &kp CARET         &mt RSHFT AMPS   &mt RCTRL STAR         &mt RALT LPAR   &mt RGUI RPAR   &mt RCTRL UNDER
-  &mt LALT EQUAL   &kp F9        &kp F10       &kp F11                &kp F12        &none       &none             &none            &none                  &none           &none           &mt RALT MINUS
-                                               &lt ADJUST_LAYER TAB   &trans         &trans      &trans            &trans           &lt ADJUST_LAYER DEL
+//    ┌───────────┬─────────────┬────────────┬───────────────────────┬────────────┬───────────┬─────┬───────────┬───────────────────────┬───────────┬───────────┬───────────┐
+//    │           │     f12     │     f7     │          f8           │     f9     │  &accent  │  !  │     @     │           #           │     $     │     %     │           │
+//    ├───────────┼─────────────┼────────────┼───────────────────────┼────────────┼───────────┼─────┼───────────┼───────────────────────┼───────────┼───────────┼───────────┤
+//    │ mt lctl + │ mt lgui f11 │ mt lalt f4 │      mt lctl f5       │ mt lsft f6 │ &shiftalt │  ^  │ mt rsft & │       mt rctl *       │ mt ralt ( │ mt rgui ) │ mt rctl _ │
+//    ├───────────┼─────────────┼────────────┼───────────────────────┼────────────┼───────────┼─────┼───────────┼───────────────────────┼───────────┼───────────┼───────────┤
+//    │ mt lalt = │     f10     │     f1     │          f2           │     f3     │           │     │           │                       │           │           │ mt ralt - │
+//    └───────────┴─────────────┴────────────┼───────────────────────┼────────────┼───────────┼─────┼───────────┼───────────────────────┼───────────┴───────────┴───────────┘
+//                                           │ lt ADJUST_laltYER tab │            │           │     │           │ lt ADJUST_laltYER del │
+//                                           └───────────────────────┴────────────┴───────────┴─────┴───────────┴───────────────────────┘
+  &none            &kp F12        &kp F7        &kp F8                 &kp F9         &accent     &kp EXCLAMATION   &kp AT           &kp HASH               &kp DOLLAR      &kp PERCENT     &none
+  &mt LCTRL PLUS   &mt LWIN F11   &mt LALT F4   &mt LCTRL F5           &mt LSHFT F6   &shiftalt   &kp CARET         &mt RSHFT AMPS   &mt RCTRL STAR         &mt RALT LPAR   &mt RGUI RPAR   &mt RCTRL UNDER
+  &mt LALT EQUAL   &kp F10        &kp F1        &kp F2                 &kp F3         &none       &none             &none            &none                  &none           &none           &mt RALT MINUS
+                                                &lt ADJUST_LAYER TAB   &trans         &trans      &trans            &trans           &lt ADJUST_LAYER DEL
             >;
         };
 
