@@ -17,6 +17,9 @@
 #define NUMERIC_LAYER 4
 #define ADJUST_LAYER 5
 
+#define COMBO_TIMEOUT 50
+#define COMBO_IDLE_TIMEOUT 125
+
 &lt { quick_tap_ms = <220>; };
 
 &mt { quick_tap_ms = <220>; };
@@ -28,6 +31,42 @@
             bindings = <&to DEFAULT_LAYER>;
             key-positions = <0 11>;
             layers = <1 2>;
+        };
+        combo_paren_l {
+            bindings = <&kp LPAR>;
+            key-positions = <19 20>;
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE_TIMEOUT>;
+        };
+        combo_paren_r {
+            bindings = <&kp RPAR>;
+            key-positions = <20 21>;
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE_TIMEOUT>;
+        };
+        combo_bracket_l {
+            bindings = <&kp LBKT>;
+            key-positions = <31 32>;
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE_TIMEOUT>;
+        };
+        combo_bracket_r {
+            bindings = <&kp RBKT>;
+            key-positions = <32 33>;
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE_TIMEOUT>;
+        };
+        combo_brace_l {
+            bindings = <&kp LBRC>;
+            key-positions = <7 8>;
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE_TIMEOUT>;
+        };
+        combo_brace_r {
+            bindings = <&kp RBRC>;
+            key-positions = <8 9>;
+            timeout-ms = <COMBO_TIMEOUT>;
+            require-prior-idle-ms = <COMBO_IDLE_TIMEOUT>;
         };
     };
 
@@ -152,14 +191,14 @@
 //    ├──────────────┼──────────────┼───────────┼───────────┼───────────┼───────────────────────┼───────────────────────┼──────────────┼────────────┼──────────────┼──────────────┼────────────────┤
 //    │ mt lctl kp_+ │ mt lgui kp_/ │ mt lalt 4 │ mt lctl 5 │ mt lsft 6 │         kp_-          │         left          │ mt rsft down │ mt rctl up │ mt ralt rght │ mt rgui vold │ mt rctl K_MENU │
 //    ├──────────────┼──────────────┼───────────┼───────────┼───────────┼───────────────────────┼───────────────────────┼──────────────┼────────────┼──────────────┼──────────────┼────────────────┤
-//    │ mt lalt kp_= │      0       │     1     │     2     │     3     │         kp_.          │                       │     end      │    pscr    │     pgdn     │     mute     │      ralt      │
+//    │  mt lalt =   │      0       │     1     │     2     │     3     │         kp_.          │                       │     end      │    pscr    │     pgdn     │     mute     │      ralt      │
 //    └──────────────┴──────────────┴───────────┼───────────┼───────────┼───────────────────────┼───────────────────────┼──────────────┼────────────┼──────────────┴──────────────┴────────────────┘
 //                                              │           │           │ lt ADJUST_laltYER ent │ lt ADJUST_laltYER esc │              │            │
 //                                              └───────────┴───────────┴───────────────────────┴───────────────────────┴──────────────┴────────────┘
-  &kp LGUI                &kp KP_MULTIPLY      &kp N7              &kp N8         &kp N9               &kp KP_PLUS            &kp INSERT             &kp HOME         &kp C_PP       &kp PG_UP        &kp C_VOL_UP        &kp RGUI
-  &mt LCTRL KP_PLUS       &mt LWIN KP_DIVIDE   &mt LALT NUMBER_4   &mt LCTRL N5   &mt LSHFT NUMBER_6   &kp KP_MINUS           &kp LEFT               &mt RSHFT DOWN   &mt RCTRL UP   &mt RALT RIGHT   &mt RGUI C_VOL_DN   &mt RCTRL K_MENU
-  &mt LEFT_ALT KP_EQUAL   &kp KP_NUMBER_0      &kp N1              &kp N2         &kp N3               &kp KP_DOT             &none                  &kp END          &kp PSCRN      &kp PG_DN        &kp C_MUTE          &kp RALT
-                                                                   &trans         &trans               &lt ADJUST_LAYER RET   &lt ADJUST_LAYER ESC   &trans           &trans
+  &kp LGUI            &kp KP_MULTIPLY      &kp N7              &kp N8         &kp N9               &kp KP_PLUS            &kp INSERT             &kp HOME         &kp C_PP       &kp PG_UP        &kp C_VOL_UP        &kp RGUI
+  &mt LCTRL KP_PLUS   &mt LWIN KP_DIVIDE   &mt LALT NUMBER_4   &mt LCTRL N5   &mt LSHFT NUMBER_6   &kp KP_MINUS           &kp LEFT               &mt RSHFT DOWN   &mt RCTRL UP   &mt RALT RIGHT   &mt RGUI C_VOL_DN   &mt RCTRL K_MENU
+  &mt LALT EQUAL      &kp KP_NUMBER_0      &kp N1              &kp N2         &kp N3               &kp KP_DOT             &none                  &kp END          &kp PSCRN      &kp PG_DN        &kp C_MUTE          &kp RALT
+                                                               &trans         &trans               &lt ADJUST_LAYER RET   &lt ADJUST_LAYER ESC   &trans           &trans
             >;
         };
 
