@@ -131,19 +131,19 @@
 
         worms1_layer {
             bindings = <
-//    ┌─────┬─────┬──────┬──────┬──────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
-//    │     │     │      │  up  │      │ tab │     │     │     │     │     │     │
-//    ├─────┼─────┼──────┼──────┼──────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │ left │ down │ rght │     │     │     │     │     │     │     │
-//    ├─────┼─────┼──────┼──────┼──────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │      │      │      │     │     │     │     │     │     │     │
-//    └─────┴─────┴──────┼──────┼──────┼─────┼─────┼─────┼─────┼─────┴─────┴─────┘
-//                       │ bspc │ spc  │ ent │ esc │     │     │
-//                       └──────┴──────┴─────┴─────┴─────┴─────┘
-  &trans   &trans   &trans           &kp UP_ARROW     &trans            &kp TAB     &trans    &trans   &trans   &trans   &trans   &trans
-  &trans   &trans   &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW   &trans      &trans    &trans   &trans   &trans   &trans   &trans
-  &trans   &trans   &trans           &trans           &trans            &trans      &trans    &trans   &trans   &trans   &trans   &trans
-                                     &kp BACKSPACE    &kp SPACE         &kp ENTER   &kp ESC   &trans   &trans
+//    ┌─────┬─────┬──────┬─────────────────────────┬──────┬───────────────────┬─────┬─────┬─────┬─────┬─────┬─────┐
+//    │     │     │      │           up            │      │        tab        │     │     │     │     │     │     │
+//    ├─────┼─────┼──────┼─────────────────────────┼──────┼───────────────────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │ left │          down           │ rght │                   │     │     │     │     │     │     │
+//    ├─────┼─────┼──────┼─────────────────────────┼──────┼───────────────────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │      │                         │      │                   │     │     │     │     │     │     │
+//    └─────┴─────┴──────┼─────────────────────────┼──────┼───────────────────┼─────┼─────┼─────┼─────┴─────┴─────┘
+//                       │ lt NUMERIC_laltYER bspc │ ent  │ lt FN_laltYER spc │ esc │     │     │
+//                       └─────────────────────────┴──────┴───────────────────┴─────┴─────┴─────┘
+  &trans   &trans   &trans           &kp UP_ARROW                  &trans            &kp TAB              &trans    &trans   &trans   &trans   &trans   &trans
+  &trans   &trans   &kp LEFT_ARROW   &kp DOWN_ARROW                &kp RIGHT_ARROW   &trans               &trans    &trans   &trans   &trans   &trans   &trans
+  &trans   &trans   &trans           &trans                        &trans            &trans               &trans    &trans   &trans   &trans   &trans   &trans
+                                     &lt NUMERIC_LAYER BACKSPACE   &kp ENTER         &lt FN_LAYER SPACE   &kp ESC   &trans   &trans
             >;
 
 
